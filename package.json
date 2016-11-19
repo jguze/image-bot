@@ -1,5 +1,5 @@
 {
-  "name": "CensorBot",
+  "name": "image-bot",
   "version": "1.0.0",
   "description": "A link checking bot built on nodejs and the bot framework",
   "main": "server.js",
@@ -9,9 +9,5 @@
     "restify": "^4.1.1",
     "url": "^0.11.0"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "na",
-    "start": "node server.js"
-  }
+  "devDependencies": {}
 }

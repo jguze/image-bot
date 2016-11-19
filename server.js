@@ -41,7 +41,7 @@ server.get(/.*/, restify.serveStatic({
 	'default': 'index.html'
 }));
 
-server.listen(process.env.port || process.env.PORT || 3978, function () {
+server.listen(process.env.port || 3978, function () {
     console.log('%s listening to %s', server.name, server.url); 
 });
 
@@ -199,17 +199,5 @@ function _findUrl(text) {
 
 // a test image:  https://img0.etsystatic.com/045/0/6267543/il_570xN.665155536_842h.jpg
 
-// Download images
-
-var fs = require('fs');
-
-var download = function(uri, filename, callback){
-  request.head(uri, function(err, res, body){
-    // console.log('content-type:', res.headers['content-type']);
-    // console.log('content-length:', res.headers['content-length']);
-
-    request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-  });
-};
 
 
