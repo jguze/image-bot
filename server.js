@@ -57,6 +57,7 @@ bot.dialog('/', function (session) {
     var extractedUrl = extractUrl(session.message);
 
     if (extractedUrl === "") {
+        return
     }
     else {
         analyzeImage(extractedUrl, function (error, response, body) {
@@ -79,7 +80,7 @@ bot.dialog('/', function (session) {
 
                 session.send(message);
             } else {
-                session.send("Sorry. I can't process other links yet. Please link an image instead.");
+                console.log(body.message);
             }
         }, ["Adult"])
     }
