@@ -9,5 +9,6 @@
     "restify": "^4.1.1",
     "url": "^0.11.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines":{"node": "6.4.0"}
 }
